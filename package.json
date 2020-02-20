@@ -1,8 +1,8 @@
 {
   "name": "pr-pilot",
   "version": "1.0.0",
-  "description": "A PR Pilot",
-  "author": "Emerson Almeida <emersonalmeidax@gmail.com> (http://github.com/dukex)",
+  "description": "A Probot app",
+  "author": "Emerson Almeida <emersonalmeidax@gmail.com>",
   "license": "ISC",
   "repository": "https://github.com//pr-pilot.git",
   "homepage": "https://github.com//pr-pilot",
@@ -14,29 +14,23 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "dev": "yarn build && nodemon --exec \"npm start\"",
+    "dev": "nodemon --exec \"npm start\"",
     "start": "probot run ./lib/index.js",
     "lint": "standard **/*.ts --fix",
     "test": "jest && standard **/*.ts",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
-    "@types/nock": "^9.3.0",
     "nock": "^10.0.0",
-    "probot": "^7.2.0"
+    "@types/nock": "^9.3.0",
+    "probot": "^9.3.4"
   },
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "@types/node": "^11.9.0",
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
-    "@typescript-eslint/parser": "^1.9.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-typescript": "^0.14.0",
     "jest": "^24.0.0",
-    "node-inspect": "^1.11.5",
     "nodemon": "^1.17.2",
-    "prettier": "1.17.1",
     "smee-client": "^1.0.2",
     "standard": "^12.0.1",
     "ts-jest": "^24.0.0",
